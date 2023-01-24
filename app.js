@@ -14,7 +14,7 @@ const publicDirectory = path.join(__dirname, "./public");
 app.use(express.static(publicDirectory));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.set("view engine", "hbs");
+app.set("view engine", "ejs");
 db.connect((err) => {
   if (err) {
     console.log("Error while connecting", err);
